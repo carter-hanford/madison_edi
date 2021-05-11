@@ -40,11 +40,10 @@ var webmap = new WebMap({
           id: "b75a64afd3f445da986698ef6c85c393"
         }
       });
-      var view = new SceneView({
-        container: "viewDiv",
-        map: scene,
-		viewingMode:'global'
-      });
+      var view = new MapView({
+          map: webmap,
+          container: "viewDiv"
+        });
     });
     </script>
     
