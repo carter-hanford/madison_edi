@@ -31,12 +31,13 @@
       require([
       "esri/WebScene",
       "esri/views/SceneView",
-      "dojo/domReady!"
-    ], function(WebScene, SceneView) {
+      "dojo/domReady!",
+      "esri/WebScene"
+    ], function(WebScene, SceneView, WebMap) {
 
-var scene = new WebScene({
-        portalItem:{
-         id:"b75a64afd3f445da986698ef6c85c393" 
+var webmap = new WebMap({
+        portalItem: { // autocasts as new PortalItem()
+          id: "b75a64afd3f445da986698ef6c85c393"
         }
       });
       var view = new SceneView({
