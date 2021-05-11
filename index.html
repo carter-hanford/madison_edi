@@ -1,11 +1,56 @@
- <title>Carter's JSAPI 4.18 Map</title>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+  <title>Map 3</title>
+    
+    <link rel="stylesheet" href="https://s3-us-west-1.amazonaws.com/patterns.esri.com/files/calcite-web/1.2.5/css/calcite-web.min.css">
+    
+    <link rel="stylesheet" href="https://js.arcgis.com/4.18/esri/themes/dark-blue/main.css">
+    
+     <div class="panel panel-dark">
+  <h4 class="trailer-half">Percent of Economically Disadvantaged Students by District - Madison, Wisconsin</h4>
+  <p class="trailer-0">Data from <code>https://madison.apl.wisc.edu/</code></p>
+  </div>
+    
+    <style>
+      html,
+    body,
+    #viewDiv {
+      padding: 0;
+      margin: 0;
+      height: 100%;
+      width: 100%;
+    }
+    </style>
 
-<link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="https://js.arcgis.com/4.18/esri/css/main.css">
+  <script src="https://js.arcgis.com/4.18/"></script>
+    
+    <script>
+      require([
+      "esri/WebScene",
+      "esri/views/SceneView",
+      "dojo/domReady!"
+    ], function(WebScene, SceneView) {
 
-<link rel="stylesheet" href="https://js.arcgis.com/4.18/esri/themes/light/main.css"/>
-<script src="https://js.arcgis.com/4.18/"></script>
+var scene = new WebScene({
+        portalItem:{
+         id:"b75a64afd3f445da986698ef6c85c393" 
+        }
+      });
+      var view = new SceneView({
+        container: "viewDiv",
+        map: scene,
+		viewingMode:'global'
+      });
+    });
+    </script>
+    
+    </head>
 
-<body>
-  <div id="viewDiv"></div>
-  <script src="script.js"></script>
-</body>
+  <body>
+<div id="viewDiv"></div>
+  </body>
+  
+</html>
